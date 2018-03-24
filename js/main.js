@@ -42,15 +42,15 @@ var pipes = new Array();
 var replayclickable = false;
 
 //sounds
-var volume = 30;
+var volume = 100;
 var soundJump = new buzz.sound("assets/sounds/sfx_wing.ogg");
 var soundScore = new buzz.sound("assets/sounds/sfx_point.ogg");
 var soundHit = new buzz.sound("assets/sounds/sfx_hit.ogg");
 var soundDie = new buzz.sound("assets/sounds/sfx_die.ogg");
 var soundSwoosh = new buzz.sound("assets/sounds/sfx_swooshing.ogg");
-var soundWagnerBridalChorus = new Audio("assets/sounds/Wagner_Bridal_Chorus.ogg");
+var soundWagnerBridalChorus = new buzz.sound("assets/sounds/Wagner_Bridal_Chorus.ogg", {preload : true});
 buzz.all().setVolume(volume);
-soundWagnerBridalChorus.volume = 0.3;
+
 
 //loops
 var loopGameloop;
@@ -128,6 +128,8 @@ function startGame()
    $("#splash").stop();
    $("#splash").transition({ opacity: 0 }, 500, 'ease');
 
+
+   soundWagnerBridalChorus.fadeIn();
    soundWagnerBridalChorus.play();
    //update the big score
    setBigScore();
