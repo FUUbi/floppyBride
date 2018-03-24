@@ -199,6 +199,107 @@ Screen - Game
    animation: animLand 2516ms linear infinite;
 }
 
+#altar
+{
+   position: absolute;
+   bottom: 0;
+   right: 2%;
+   width: 20%;
+   height:60px;
+   background-image: url('../assets/altar.png');
+   background-repeat: no-repeat;
+   background-position: 0px 0px;
+   background-color: transparent;
+
+
+}
+
+#groom
+{
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   width: 100px;
+   height:100px;
+   background-image: url('../assets/groom.png');
+   background-repeat: no-repeat;
+   background-position: 0px 0px;
+   background-color: transparent;
+
+
+}
+
+#flowersBottomLeft
+{
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100px;
+   height:79px;
+   background-image: url('../assets/flowerBL.png');
+   background-repeat: no-repeat;
+   background-position: 0px 0px;
+   background-color: transparent;
+   -webkit-background-size: contain;
+   background-size: contain;
+   z-index: 10;
+
+
+}
+
+#flowersBottomRight
+{
+   position: absolute;
+   bottom: 0;
+   right: 0;
+   height:79px;
+   width:100px;
+   background-image: url('../assets/flowerBR.png');
+   background-repeat: no-repeat;
+   background-position: 0px 0px;
+   background-color: transparent;
+   -webkit-background-size: contain;
+   background-size: contain;
+   z-index: 10;
+
+
+}
+
+#flowersTopLeft
+{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100px;
+   height:100px;
+   background-image: url('../assets/flowerTL.png');
+   background-repeat: no-repeat;
+   background-position: 0px 0px;
+   background-color: transparent;
+   -webkit-background-size: contain;
+   background-size: contain;
+   z-index: 10;
+
+
+}
+
+#flowerTopRight
+{
+   position: absolute;
+   top: 0;
+   right: 0;
+   height:100px;
+   width:100px;
+   background-image: url('../assets/flowerTR.png');
+   background-repeat: no-repeat;
+   background-position: 0px 0px;
+   background-color: transparent;
+   -webkit-background-size: contain;
+   background-size: contain;
+   z-index: 10;
+
+
+}
 #bigscore
 {
    position: absolute;

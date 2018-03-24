@@ -48,7 +48,9 @@ var soundScore = new buzz.sound("assets/sounds/sfx_point.ogg");
 var soundHit = new buzz.sound("assets/sounds/sfx_hit.ogg");
 var soundDie = new buzz.sound("assets/sounds/sfx_die.ogg");
 var soundSwoosh = new buzz.sound("assets/sounds/sfx_swooshing.ogg");
+var soundWagnerBridalChorus = new Audio("assets/sounds/Wagner_Bridal_Chorus.ogg");
 buzz.all().setVolume(volume);
+soundWagnerBridalChorus.volume = 0.3;
 
 //loops
 var loopGameloop;
@@ -102,7 +104,7 @@ function showSplash()
    //update the player in preparation for the next game
    $("#player").css({ y: 0, x: 0});
    updatePlayer($("#player"));
-   
+
    soundSwoosh.stop();
    soundSwoosh.play();
    
@@ -125,7 +127,8 @@ function startGame()
    //fade out the splash
    $("#splash").stop();
    $("#splash").transition({ opacity: 0 }, 500, 'ease');
-   
+
+   soundWagnerBridalChorus.play();
    //update the big score
    setBigScore();
    
@@ -359,7 +362,7 @@ function playerDead()
    
    //it's time to change states. as of now we're considered ScoreScreen to disable left click/flying
    currentstate = states.ScoreScreen;
-
+   soundWagnerBridalChorus.pause();
    //destroy our gameloops
    clearInterval(loopGameloop);
    clearInterval(loopPipeloop);
